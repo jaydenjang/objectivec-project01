@@ -49,15 +49,22 @@ int main(int argc, const char * argv[]) {
     
     
     @autoreleasepool {
-        Fraction *pMyFraction = nil;
-        pMyFraction = [Fraction alloc];
-        pMyFraction = [pMyFraction init];
+        Fraction *pMyFraction01 = nil;
+        Fraction *pMyFraction02 = nil;
+        pMyFraction01 = [[Fraction alloc] init];
+        pMyFraction02 = [[Fraction alloc] init];
         
-        [pMyFraction setNumber:1];
-        [pMyFraction setDenominator:3];
+        [pMyFraction01 setNumber:2];
+        [pMyFraction01 setDenominator:3];
         
-        NSLog(@"The Value of myFraction is:");
-        [pMyFraction print];
+        [pMyFraction02 setNumber:3];
+        [pMyFraction02 setDenominator:7];
+        
+        NSLog(@"The First fraction is:");
+        [pMyFraction01 print];
+        
+        NSLog(@"The Second fraction is:");
+        [pMyFraction02 print];
     }
     
     
