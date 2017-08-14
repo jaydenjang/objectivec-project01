@@ -8,14 +8,56 @@
 
 #import <Foundation/Foundation.h>
 
+//---- @interface
+@interface Fraction : NSObject
+
+-(void) print;
+-(void) setNumber: (int) n;
+-(void) setDenominator: (int) d;
+
+@end
+
+
+//---- @implementation
+@implementation Fraction
+
+{
+    int numerator;
+    int denominator;
+}
+
+-(void) print
+{
+    NSLog(@"%i/%i", numerator, denominator);
+}
+
+-(void) setNumber:(int)n
+{
+    numerator = n;
+}
+
+-(void) setDenominator:(int)d
+{
+    denominator = d;
+}
+
+@end
+
+
+
 int main(int argc, const char * argv[]) {
     
     
     @autoreleasepool {
-        int sum = 0;
-        sum = 50+25;
+        Fraction *pMyFraction = nil;
+        pMyFraction = [Fraction alloc];
+        pMyFraction = [pMyFraction init];
         
-        NSLog(@"The sum of 50 and 25 is %i", sum);
+        [pMyFraction setNumber:1];
+        [pMyFraction setDenominator:3];
+        
+        NSLog(@"The Value of myFraction is:");
+        [pMyFraction print];
     }
     
     
