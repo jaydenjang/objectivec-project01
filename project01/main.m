@@ -14,6 +14,8 @@
 -(void) print;
 -(void) setNumber: (int) n;
 -(void) setDenominator: (int) d;
+-(int) getNumber;
+-(int) getDenominator;
 
 @end
 
@@ -41,6 +43,16 @@
     denominator = d;
 }
 
+-(int) getNumber
+{
+    return numerator;
+}
+
+-(int) getDenominator
+{
+    return denominator;
+}
+
 @end
 
 
@@ -65,6 +77,8 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"The Second fraction is:");
         [pMyFraction02 print];
+        
+        NSLog(@"The First fraction is %i/%i", [pMyFraction01 getNumber], [pMyFraction01 getDenominator]);
     }
     
     
